@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  description: "Verren Angelina Saputraaa",
 };
 
 export default function RootLayout({
