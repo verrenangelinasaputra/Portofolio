@@ -20,7 +20,13 @@ const config: Config = {
         md: "2rem",
       },
     },
-    extend: {},
+    // connect the tailwind with next js using extend
+    extend: {
+      fontFamily:{
+        sans: 'var(--font-sans)',
+        serif: 'var(--font-serif)',
+      }
+    },
   },
   plugins: [],
 };
