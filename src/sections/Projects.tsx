@@ -8,37 +8,37 @@ import GrainImage from '@/assets/images/grain.jpg';
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "BINUS AND Terra SINGAPORE",
+    year: "2024",
+    title: "Artificial Intelligence",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed over 5 AI projects" },
+      { title: "Accepted for presentation at ICCSCI'24" },
+      { title: "Published in Procedia Computer Science" },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "BINUS AND SOKO FINANCIAL",
+    year: "2023-2024",
+    title: "Data Analytics and Visualization",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Developed over 4 Data projects" },
+      { title: "Utilized tools for 50K+ data" },
+      { title: "3rd Place at HIMMAT BINUS Data Analytics Competition." },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "BINUS",
+    year: "2023-2024",
+    title: "Web and App Development",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed over 5 projects" },
+      { title: "Led web development for HIMTI's premier event, HISHOT 2023" },
+      { title: "1st Place at TECHFEST BINUS UI/UX Competition" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
@@ -51,8 +51,8 @@ export const ProjectsSection = () => {
       <div className="flex justify-center">
         <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">Real-world Results</p>
       </div>
-      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
-      <p className="text-center md:text-lg lg:mt-2 text-white/60 mt4 max-w-md mx-auto">See how i transformed concepts into engaging digital experience</p>
+      <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Projects Showcase</h2>
+      <p className="text-center sm:mt-8 md:text-lg lg:mt-8 text-white/60 mt4 max-w-3xl mx-auto">Discover my portfolio of projects in artificial intelligence, data analytics, and web development. Each project highlights my skills and dedication to using technology to address practical challenges. Explore case studies that demonstrate my innovative solutions in various technical fields.</p>
       <div className="mt-10 md:mt-20 flex flex-col gap-20">
         {portfolioProjects.map(project => (
           <div key={project.title} className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
