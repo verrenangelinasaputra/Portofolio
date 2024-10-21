@@ -1,16 +1,18 @@
 import StarIcon from '@/assets/icons/star.svg';
 
 const words = [
-  "Performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
+  "Figma",
+  "Smojo",
+  "Deep Learning",
+  "Machine Learning",
+  "Transformer",
+  "Python",
+  "MySQL",
+  "SQL Server",
+  "R",
+  "Android",
+  "React",
+  "Tailwind CSS",
 ]
 
 export const TapeSection = () => {
