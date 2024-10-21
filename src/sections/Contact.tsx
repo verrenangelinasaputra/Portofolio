@@ -11,13 +11,13 @@ export const ContactSection = () => {
               backgroundImage: `url(${grainImage.src})`,
             }}
           ></div>
-          <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">Let's create something amazing together</h2>
               <p className="text-sm md:text-base mt-2">Ready to bring your next project to life? Let's connect and discuss how I can help you achieve your goals.</p>
             </div>
             <div>
-              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max mt-8">
+              <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border-gray-900">
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4"/>
               </button>
