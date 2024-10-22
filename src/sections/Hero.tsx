@@ -95,7 +95,9 @@ export const HeroSection = () => {
       <div className='flex flex-col items-center'>
       <Image src={memojiImage} className="size-[130px] mt-[-30px]" alt="Person peeking from behind laptop"/>
       <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
-        <div className='bg-green-500 size-2.5 rounded-full'></div>
+        <div className='bg-green-500 size-2.5 rounded-full relative'>
+          <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
+        </div>
         <div className='text-sm font-medium'>Open to work</div>
       </div>
       <div className='max-w-lg mx-auto'>
@@ -104,7 +106,7 @@ export const HeroSection = () => {
         <TypingText />
       </div>
       <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-        <a href="https://github.com/verrenangelinasaputra" // Ganti "usernameAnda" dengan username GitHub Anda
+        <a href="https://github.com/verrenangelinasaputra" 
           className='inline-flex items-center ga-2 border border-white/15 px-6 h-12 rounded-xl z-10'
           target="_blank" // Membuka link di tab baru
           rel="noopener noreferrer" // Untuk keamanan dan optimasi SEO
