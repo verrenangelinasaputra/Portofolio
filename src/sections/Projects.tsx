@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/Mockup-Laptop.png";
+import lightSaasLandingPage from "@/assets/images/Mockup-Laptop-2.png";
+import aiStartupLandingPage from "@/assets/images/Mockup-Laptop-3.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -26,7 +26,7 @@ const portfolioProjects = [
     results: [
       { title: "Developed over 4 Data projects" },
       { title: "Utilized tools for 50K+ data" },
-      { title: "3rd Place at HIMMAT BINUS Data Analytics Competition." },
+      { title: "3rd Place at DAIC HIMMAT BINUS" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
     image: lightSaasLandingPage,
@@ -37,8 +37,8 @@ const portfolioProjects = [
     title: "Web and App Development",
     results: [
       { title: "Developed over 5 projects" },
-      { title: "Led web development for HIMTI's premier event, HISHOT 2023" },
-      { title: "1st Place at TECHFEST BINUS UI/UX Competition" },
+      { title: "Web development lead HISHOT 2023 HIMTI" },
+      { title: "1st Place UI/UX at TECHFEST 2024" },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
     image: aiStartupLandingPage,
