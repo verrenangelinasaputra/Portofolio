@@ -1,14 +1,48 @@
+
+"use client";
+
+import React, { useState } from 'react';
+
 export const Header = () => {
+  // State to keep track of the active link
+  const [activeLink, setActiveLink] = useState('home');
+
+  // Function to handle smooth scrolling and setting active link
+  const handleScroll = (anchorId, linkName) => {
+    const anchor = document.querySelector(anchorId);
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveLink(linkName); // Update the active link state
+    }
+  };
+
   return (
-    <div className="flex justify-center items-center relative top-3 w-full z-10">
-      {/* p-0.5 means padding */}
+    <div className="flex justify-center items-center relative top-3 w-full z-10 sticky">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
-        {/* className calls the global variables instead of local that isn't efficient to use */}
-        <a href="#" className="nav-item">Home</a>
-        <a href="#" className="nav-item">Projects</a>
-        <a href="#" className="nav-item">About</a>
-        {/* overrides specific design for active button */}
-        <a href="#" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">Contact</a>
+        <a href="#home"
+           className={`nav-item ${activeLink === 'home' ? 'bg-white text-gray-900' : ''}`}
+           onClick={(e) => {
+             e.preventDefault();
+             handleScroll('#home', 'home');
+           }}>Home</a>
+        <a href="#projects"
+           className={`nav-item ${activeLink === 'projects' ? 'bg-white text-gray-900' : ''}`}
+           onClick={(e) => {
+             e.preventDefault();
+             handleScroll('#projects', 'projects');
+           }}>Projects</a>
+        <a href="#contact"
+           className={`nav-item ${activeLink === 'contact' ? 'bg-white text-gray-900' : ''}`}
+           onClick={(e) => {
+             e.preventDefault();
+             handleScroll('#contact', 'contact');
+           }}>Contact</a>
+        <a href="#profile"
+           className={`nav-item ${activeLink === 'profile' ? 'bg-white text-gray-900' : ''}`}
+           onClick={(e) => {
+             e.preventDefault();
+             handleScroll('#profile', 'profile');
+           }}>Profile</a>
       </nav>
     </div>
   );
