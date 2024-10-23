@@ -5,6 +5,8 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from '@/assets/images/grain.jpg';
+import Link from 'next/link';
+// import { AIProjectSection } from "@/sections/AIProject";
 
 const portfolioProjects = [
   {
@@ -16,7 +18,7 @@ const portfolioProjects = [
       { title: "Accepted for presentation at ICCSCI'24" },
       { title: "Published in Procedia Computer Science" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "/aiproject",
     image: darkSaasLandingPage,
   },
   {
@@ -28,7 +30,7 @@ const portfolioProjects = [
       { title: "Utilized tools for 50K+ data" },
       { title: "3rd Place at DAIC HIMMAT BINUS" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "/dataproject",
     image: lightSaasLandingPage,
   },
   {
@@ -40,7 +42,7 @@ const portfolioProjects = [
       { title: "Web development lead HISHOT 2023 HIMTI" },
       { title: "1st Place UI/UX at TECHFEST 2024" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "/webproject",
     image: aiStartupLandingPage,
   },
 ];
@@ -80,9 +82,12 @@ export const ProjectsSection = () => {
                 </li>
               ))}
             </ul>
-            <a href="{project.link}">
-              <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8"><span>View More</span><ArrowUpRightIcon className="size-4" /></button>
-            </a>
+            <Link href={project.link}>
+              <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
+                <span>View More</span>
+                <ArrowUpRightIcon className="size-4" />
+              </button>
+            </Link>
             </div>
             <div className="relative">
             <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>

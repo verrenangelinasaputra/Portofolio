@@ -37,7 +37,7 @@ export const Header = () => {
              e.preventDefault();
              handleScroll('#contact', 'contact');
            }}>Contact</a>
-        <a href="#profile"
+        <a href="/profile"
            className={`nav-item ${activeLink === 'profile' ? 'bg-white text-gray-900' : ''}`}
            onClick={(e) => {
              e.preventDefault();
