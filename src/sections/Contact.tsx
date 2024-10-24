@@ -13,7 +13,7 @@ export const ContactSection = () => {
           ></div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="font-serif text-2xl md:text-3xl">Let's create something amazing together</h2>
+              <h2 className="font-serif text-2xl md:text-3xl">Lets create something amazing together</h2>
               <p className="text-sm md:text-base mt-2">Interested in collaborating? Reach out to me via email to discuss how we can turn your vision into reality</p>
             </div>
             <div>

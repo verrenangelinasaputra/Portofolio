@@ -8,7 +8,7 @@ export const Header = () => {
   const [activeLink, setActiveLink] = useState('home');
 
   // Function to handle smooth scrolling and setting active link
-  const handleScroll = (anchorId, linkName) => {
+  const handleScroll = (anchorId:string, linkName:string) => {
     const anchor = document.querySelector(anchorId);
     if (anchor) {
       anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -17,7 +17,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="flex justify-center items-center relative top-3 w-full z-10 sticky">
+    <div className="flex justify-center items-center top-3 w-full z-10 sticky">
       <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
         <a href="#home"
            className={`nav-item ${activeLink === 'home' ? 'bg-white text-gray-900' : ''}`}

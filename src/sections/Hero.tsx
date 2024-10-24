@@ -1,34 +1,39 @@
-
 "use client";
 
 import memojiImage from '@/assets/images/my-avatar.png';
 import Image from "next/image";
-// import ArrowDown from '@assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import StarIcon from '@/assets/icons/star.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export const TypingText = () => {
   const [currentText, setCurrentText] = useState('');
-  const texts = ["Majoring in Artificial Intelligence", "Passionate about Data Scientist", "Enthusiastic about Data Analysis and Engineering", "Experienced as a Lab Assistant and Chatbot Dev", "Open to Opportunities in Data and AI Roles!"];
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = isDeleting ? 15 : 50; // kecepatan typing
+  const typingSpeed = isDeleting ? 15 : 50; // Speed of typing
+
+  // Use useMemo to ensure 'texts' is only re-initialized when needed
+  const texts = useMemo(() => [
+    "Majoring in Artificial Intelligence",
+    "Passionate about Data Scientist",
+    "Enthusiastic about Data Analysis and Engineering",
+    "Experienced as a Lab Assistant and Chatbot Dev",
+    "Open to Opportunities in Data and AI Roles!"
+  ], []); // Empty dependency array means this runs only once
 
   useEffect(() => {
     const handleTyping = () => {
       if (!isDeleting && charIndex === texts[index].length) {
-        setTimeout(() => setIsDeleting(true), 1000); // jeda sebelum mulai menghapus teks
+        setTimeout(() => setIsDeleting(true), 1000); // Pause before starting to delete
       } else if (isDeleting && charIndex === 0) {
-        setIndex((prevIndex) => (prevIndex + 1) % texts.length); // ganti teks setelah dihapus
+        setIndex(prevIndex => (prevIndex + 1) % texts.length);
         setIsDeleting(false);
-        setCurrentText(''); // Reset text ketika mulai mengetik teks baru
-        setCharIndex(0); // Reset index karakter
+        setCurrentText('');
+        setCharIndex(0);
       } else {
         const nextChar = isDeleting ? charIndex - 1 : charIndex + 1;
         setCurrentText(texts[index].slice(0, nextChar));
@@ -43,7 +48,7 @@ export const TypingText = () => {
   return (
     <p className='mt-4 text-center text-white/60 md:text-lg'>
       {currentText}
-      <span className='blinking-cursor'>|</span> {/* Tambahkan cursor berkedip */}
+      <span className='blinking-cursor'>|</span> {/* Blinking cursor */}
     </p>
   );
 };
