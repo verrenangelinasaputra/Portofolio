@@ -30,7 +30,7 @@ const portfolioProjects = [
       { title: "3rd Place at DAIC HIMMAT BINUS" },
     ],
     link: "/dataproject",
-    image: lightSaasLandingPage,
+    image: aiStartupLandingPage,
   },
   {
     company: "BINUS",
@@ -42,7 +42,7 @@ const portfolioProjects = [
       { title: "1st Place UI/UX at TECHFEST 2024" },
     ],
     link: "/webproject",
-    image: aiStartupLandingPage,
+    image: lightSaasLandingPage,
   },
 ];
 
