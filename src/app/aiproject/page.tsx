@@ -9,8 +9,12 @@ import { Footer } from '@/sections/Footer';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 
 // Import images from your assets
-import memojiImage from '@/assets/images/Mockup-Laptop-2.png';
-import memojiImage2 from '@/assets/images/Mockup-Laptop-3.png';
+import animate from '@/assets/images/Project-Animate.jpg';
+import monelytics from '@/assets/images/Project-Monelytics.jpg';
+import nlp from '@/assets/images/Project-NLP.jpg';
+import skin from '@/assets/images/Project-Skin.jpg';
+import sounify from '@/assets/images/Project-Sounify.jpg';
+import spam from '@/assets/images/Project-Spam.jpg';
 
 export default function AIProjectPage() {
     const [activeLink, setActiveLink] = useState('ai'); // State for active link for navigation
@@ -29,37 +33,37 @@ export default function AIProjectPage() {
         {
             title: "Business Startup",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: animate,
             href: '/dataproject'
         },
         {
             title: "Business Startup 1",
             description: "Design & Development",
-            imgUrl: memojiImage2,
+            imgUrl: monelytics,
             href: '/'
         },
         {
             title: "Business Startup 2",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: sounify,
             href: '/'
         },
         {
             title: "Business Startup 3",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: skin,
             href: '/'
         },
         {
             title: "Business Startup 4",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: nlp,
             href: '/'
         },
         {
             title: "Business Startup 5",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: spam,
             href: '/'
         }
     ];
