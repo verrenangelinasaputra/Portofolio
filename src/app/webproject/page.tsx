@@ -66,7 +66,7 @@ export default function WebProjectSection() {
       title: "ƧlOOT",
       description: "",
       imgUrl: toyz,
-      href: "/",
+      href: "https://github.com/verrenangelinasaputra/HI-Toyz",
       tools: [
         { name: "React", image: html },
         { name: "Next.js", image: css },
