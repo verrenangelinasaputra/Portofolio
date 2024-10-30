@@ -13,7 +13,7 @@ import memojiImage from '@/assets/images/Mockup-Laptop-2.png';
 import memojiImage2 from '@/assets/images/Mockup-Laptop-3.png';
 
 export default function AIProjectPage() {
-    const [activeLink, setActiveLink] = useState('home'); // State for active link for navigation
+    const [activeLink, setActiveLink] = useState('ai'); // State for active link for navigation
 
     // Function to handle scrolling to sections
     const handleScroll = (id: string, link: string) => {
@@ -86,33 +86,13 @@ const footerLinks = [
 
     return (
         <div>
-    <div className="flex justify-center items-center top-3 w-full z-10 sticky">
-      <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
-        <a href="#home"
-           className={`nav-item ${activeLink === 'home' ? 'bg-white text-gray-900' : ''}`}
-           onClick={(e) => {
-             e.preventDefault();
-             handleScroll('#home', 'home');
-           }}>AI</a>
-        <a href="#projects"
-           className={`nav-item ${activeLink === 'projects' ? 'bg-white text-gray-900' : ''}`}
-           onClick={(e) => {
-             e.preventDefault();
-             handleScroll('#projects', 'projects');
-           }}>Data</a>
-        <a href="#contact"
-           className={`nav-item ${activeLink === 'contact' ? 'bg-white text-gray-900' : ''}`}
-           onClick={(e) => {
-             e.preventDefault();
-             handleScroll('#contact', 'contact');
-           }}>Web</a>
-        <a href="/profile"
-           className={`nav-item ${activeLink === 'profile' ? 'bg-white text-gray-900' : ''}`}
-           onClick={(e) => {
-             e.preventDefault();
-             handleScroll('#profile', 'profile');
-           }}>Home</a>
-      </nav>
+        <div className="flex justify-center items-center top-3 w-full z-10 sticky">
+            <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
+                <Link href="/aiproject" passHref className={`nav-item ${activeLink === 'ai' ? 'bg-white text-gray-900' : ''}`}>AI</Link>
+                <Link href="/dataproject" passHref className={`nav-item ${activeLink === 'data' ? 'bg-white text-gray-900' : ''}`}>Data</Link>
+                <Link href="/webproject" passHref className={`nav-item ${activeLink === 'web' ? 'bg-white text-gray-900' : ''}`}>Web</Link>
+                <Link href="/" passHref className={`nav-item ${activeLink === 'home' ? 'bg-white text-gray-900' : ''}`}>Home</Link>
+            </nav>
     </div>
     <section className="text-center p-5">
                 <div className="container mx-auto">
