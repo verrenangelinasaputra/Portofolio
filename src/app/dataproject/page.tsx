@@ -5,15 +5,18 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import grainImage from '@/assets/images/grain.jpg';
+import { Footer } from '@/sections/Footer';
+import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 
 // Import images from your assets
 import memojiImage from '@/assets/images/Mockup-Laptop-2.png';
+import memojiImage2 from '@/assets/images/Mockup-Laptop-3.png';
 
 export default function DataProjectPage() {
     const [activeLink, setActiveLink] = useState('home'); // State for active link for navigation
 
     // Function to handle scrolling to sections
-    const handleScroll = (id, link) => {
+    const handleScroll = (id: string, link: string) => {
         const element = document.querySelector(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -26,49 +29,48 @@ export default function DataProjectPage() {
         {
             title: "Business Startup",
             description: "Design & Development",
-            imgUrl: memojiImage
+            imgUrl: memojiImage,
+            href: '/dataproject'
         },
         {
             title: "Business Startup 1",
             description: "Design & Development",
-            imgUrl: memojiImage
+            imgUrl: memojiImage2,
+            href: '/'
         },
         {
             title: "Business Startup 2",
             description: "Design & Development",
-            imgUrl: memojiImage
+            imgUrl: memojiImage,
+            href: '/'
         },
         {
             title: "Business Startup 3",
             description: "Design & Development",
-            imgUrl: memojiImage
-        },
-        {
-            title: "Business Startup 4",
-            description: "Design & Development",
-            imgUrl: memojiImage
-        },
-        {
-            title: "Business Startup 5",
-            description: "Design & Development",
-            imgUrl: memojiImage
-        },
-        {
-            title: "Business Startup 6",
-            description: "Design & Development",
-            imgUrl: memojiImage
-        },
-        {
-            title: "Business Startup 7",
-            description: "Design & Development",
-            imgUrl: memojiImage
-        },
-        {
-            title: "Business Startup 8",
-            description: "Design & Development",
-            imgUrl: memojiImage
-        },
+            imgUrl: memojiImage,
+            href: '/'
+        }
     ];
+
+    
+const footerLinks = [
+  {
+    title: 'Github',
+    href: 'https://github.com/verrenangelinasaputra',
+  },
+  {
+    title: 'Instagram',
+    href: 'https://www.instagram.com/verrenangelina/',
+  },
+  {
+    title: 'Linkedin',
+    href: 'https://www.linkedin.com/in/verrenangelinasaputra/',
+  },
+  {
+    title: 'Youtube',
+    href: 'https://www.youtube.com/@verrenangelinasaputra/videos',
+  },
+]
 
     return (
         <div>
@@ -103,31 +105,49 @@ export default function DataProjectPage() {
     <section className="text-center p-5">
                 <div className="container mx-auto">
                     <h2 className="mt-8 text-3xl font-bold mb-2 text-white bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent">Projects</h2>
-                    <p className="text-white/80">Explore our projects showcasing our commitment to innovation and excellence.</p>
+                    <p className="text-white/80">Explore our comprehensive data analytics and visualization projects at Soko Financial, which include customer interest analysis, robust data warehousing, a Tableau dashboard on poverty in Indonesia, and an award-winning emissions analysis in Asia.</p>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
-                            <div key={index} className="relative bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-                                <div className="absolute inset-0 -z-10 opacity-5" style={{
-                                    backgroundImage: `url(${grainImage.src})`,
+                            <Link key={index} href={project.href} passHref className="bg-gray-800 rounded-3xl z-0 overflow-hidden px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16 after:pointer-events-none block"
+                                style={{
+                                    backgroundImage: `url(${project.imgUrl.src})`,
                                     backgroundSize: 'cover',
-                                }}></div>
+                                    backgroundPosition: 'center',
+                                    height: '325px'
+                                }}>
                                 <div className="absolute top-2 left-2 bg-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-black">{index + 1}</div>
-                                <div className="p-4">
-                                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                    <p>{project.description}</p>
-                                    <div className="relative h-48">
-                                        <Link href="/your-target-page" passHref>
-                                            <div className="cursor-pointer">
-                                                <Image src={project.imgUrl} alt={project.title} layout="fill" objectFit="cover" className="rounded-md"/>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
+                                {/* <div className="relative">
+                                    <Image src={project.imgUrl} alt={project.title} layout="fixed" width={500} height={300} objectFit="cover" className="lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
+                                </div> */}
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
+
+            <footer className="relative overflow-x-clip">
+      <div
+        className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 -z-10"
+        style={{
+          maskImage: 'linear-gradient(transparent, black)',
+          WebkitMaskImage: 'linear-gradient(transparent, black)',
+        }}
+      ></div>
+      <div className="container">
+        <div className='border-t border-white/15 py-6 text-sm flex flex-col md:flex-row md:justify-between items-center gap-8'>
+          <div className='text-white/40 sm:justify-center sm:text-center'>&copy; 2024 Built with passion by Verren. All rights reserved.</div>
+          <nav className='flex flex-col md:flex-row items-center gap-8'>
+            {footerLinks.map(link => (
+              <a href={link.href} target="_blank" rel="noopener noreferrer" key={link.title} className='inline-flex items-center gap-1.5'>
+                <span className='font-semibold'>{link.title}</span>
+                <ArrowUpRightIcon className='size-4'/>
+              </a>
+            ))}
+          </nav>
         </div>
+      </div>
+    </footer>
+        </div>
+        
     );
 }

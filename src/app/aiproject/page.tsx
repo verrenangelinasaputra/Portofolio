@@ -61,18 +61,6 @@ export default function AIProjectPage() {
             description: "Design & Development",
             imgUrl: memojiImage,
             href: '/'
-        },
-        {
-            title: "Business Startup 6",
-            description: "Design & Development",
-            imgUrl: memojiImage,
-            href: '/'
-        },
-        {
-            title: "Business Startup 7",
-            description: "Design & Development",
-            imgUrl: memojiImage,
-            href: '/'
         }
     ];
 
