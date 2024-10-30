@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 export const Header = () => {
   // State to keep track of the active link
@@ -37,12 +38,7 @@ export const Header = () => {
              e.preventDefault();
              handleScroll('#contact', 'contact');
            }}>Contact</a>
-        <a href="/profile"
-           className={`nav-item ${activeLink === 'profile' ? 'bg-white text-gray-900' : ''}`}
-           onClick={(e) => {
-             e.preventDefault();
-             handleScroll('#profile', 'profile');
-           }}>Profile</a>
+        <Link href="/profile" passHref className={`nav-item ${activeLink === 'profile' ? 'bg-white text-gray-900' : ''}`}>Profile</Link>
       </nav>
     </div>
   );
