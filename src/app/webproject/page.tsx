@@ -90,24 +90,50 @@ const footerLinks = [
                     <p className="text-white/80">Dive into our innovative web and UI/UX projects, including an AI application designed for efficient trash detection and reporting, a user-friendly UI/UX for the BNEC website, an engaging online game store, and the dynamic HIMTI's HISHOT website, each tailored to enhance user interaction and functionality.</p>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-7">
                         {projects.map((project, index) => (
-                            <Link key={index} href={project.href} passHref className="bg-gray-800 rounded-3xl z-0 overflow-hidden px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16 after:pointer-events-none block"
+                            <Link key={index} href={project.href} passHref 
+                                className="bg-gray-800 rounded-3xl z-0 overflow-hidden px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16 after:pointer-events-none block"
                                 style={{
                                     backgroundImage: `url(${project.imgUrl.src})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
-                                    height: '325px'
-                                }}>
-                                <div className="absolute top-2 left-2 bg-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-black">{index + 1}</div>
-                                {/* <div className="relative">
-                                    <Image src={project.imgUrl} alt={project.title} layout="fixed" width={500} height={300} objectFit="cover" className="lg:absolute lg:h-full lg:w-auto lg:max-w-none"/>
-                                </div> */}
-                            </Link>
+                                    height: '325px',
+                                    transition: 'transform 0.3s ease-in-out',  // Add this line
+                                }}
+                                onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.05)'}  // Add this line
+                                onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}  // Add this line
+                            >
+                            <div className="absolute top-2 left-2 bg-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-black">{index + 1}</div>
+                        </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            <footer className="relative overflow-x-clip">
+            <div id="contact" className="py-16 pt-14 lg:py-24 lg:pt-20">
+      <div className="container ">
+        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
+          <div className="absolute inset-0 opacity-10 -z-10"
+            style={{
+              backgroundImage: `url(${grainImage.src})`,
+            }}
+          ></div>
+          <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+            <div>
+              <h2 className="font-serif text-2xl md:text-3xl">Lets create something amazing together</h2>
+              <p className="text-sm md:text-base mt-2">Interested in collaborating? Reach out to me via email to discuss how we can turn your vision into reality</p>
+            </div>
+            <div>
+              <a href="mailto:verren.angelinas@gmail.com" className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border-gray-900">
+                <span className="font-semibold">Contact Me</span>
+                <ArrowUpRightIcon className="size-4"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+        <footer className="relative overflow-x-clip">
       <div
         className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 -z-10"
         style={{
