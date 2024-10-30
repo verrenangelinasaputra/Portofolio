@@ -9,8 +9,10 @@ import { Footer } from '@/sections/Footer';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 
 // Import images from your assets
-import memojiImage from '@/assets/images/Mockup-Laptop-2.png';
-import memojiImage2 from '@/assets/images/Mockup-Laptop-3.png';
+import analytics from '@/assets/images/Project-Analytics.jpg';
+import daic from '@/assets/images/Project-Daic.jpg';
+import dwh from '@/assets/images/Project-Dwh.jpg';
+import soko from '@/assets/images/Project-Soko.jpg';
 
 export default function DataProjectPage() {
     const [activeLink, setActiveLink] = useState('data'); // State for active link for navigation
@@ -29,25 +31,25 @@ export default function DataProjectPage() {
         {
             title: "Business Startup",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: daic,
             href: '/dataproject'
         },
         {
             title: "Business Startup 1",
             description: "Design & Development",
-            imgUrl: memojiImage2,
+            imgUrl: dwh,
             href: '/'
         },
         {
             title: "Business Startup 2",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: soko,
             href: '/'
         },
         {
             title: "Business Startup 3",
             description: "Design & Development",
-            imgUrl: memojiImage,
+            imgUrl: analytics,
             href: '/'
         }
     ];
