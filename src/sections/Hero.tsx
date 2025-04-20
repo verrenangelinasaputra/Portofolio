@@ -103,7 +103,7 @@ export const HeroSection = () => {
         <div className='bg-green-500 size-2.5 rounded-full relative'>
           <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
         </div>
-        <div className='text-sm font-medium'>Open to work</div>
+        <div className='text-sm font-medium'>Open to freelance work</div>
       </div>
       <div className='max-w-lg mx-auto'>
         <h1 className='font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide'>Verren Angelina Saputra</h1>

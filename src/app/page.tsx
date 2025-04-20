@@ -5,6 +5,7 @@ import { TapeSection } from "@/sections/Tape";
 // import { TestimonialsSection } from "@/sections/Testimoni";
 import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
+import { AboutSection } from "@/sections/About";
 // import { AIProjectSection } from "@/sections/AIProject";
 
 export default function Home() {
