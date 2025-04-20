@@ -128,7 +128,7 @@ export default function AIProjectPage() {
     {
       title: "AI Study Planner",
       description:
-        "AI Study Planner is an intelligent chatbot built for Terra AI to help students improve productivity and learning outcomes. Featuring a Pomodoro timer, personalized study schedule generator, and tailored learning style recommendations, this tool supports learners in managing their time efficiently. Developed using Smojo, HTML, CSS, and JavaScript, it delivers a seamless and engaging experience designed to adapt to each user&apos;s unique study habits.",
+        "AI Study Planner is an intelligent chatbot built for Terra AI to help students improve productivity and learning outcomes. Featuring a Pomodoro timer, personalized study schedule generator, and tailored learning style recommendations, this tool supports learners in managing their time efficiently. Developed using Smojo, HTML, CSS, and JavaScript, it delivers a seamless and engaging experience designed to adapt to each unique study habits of user.",
       imgUrl: terra,
       href: "",
       year: "2024",
@@ -236,7 +236,7 @@ export default function AIProjectPage() {
           <br />
           <div className="flex justify-center">
             <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent text-sm md:text-base">
-              What I&apos;ve Built
+              What I Have Built
             </p>
           </div>
           <h2 className="font-serif text-white text-4xl md:text-5xl text-center mt-6 leading-tight">
