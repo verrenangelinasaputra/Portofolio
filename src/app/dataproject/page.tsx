@@ -218,97 +218,98 @@ export default function DataProjectPage() {
 
       {/* Popup modal for selected project */}
       {showPopup && selectedProjectIndex !== null && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="popup-title"
+  <div
+    className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="popup-title"
+  >
+    <div
+      className="bg-[#161E2E] rounded-xl max-w-4xl w-full p-8 relative text-white shadow-lg animate-fade-in-up"
+      style={{
+        animation: "fadeInUp 0.5s ease-out both",
+        maxHeight: "90vh", // Set a maximum height
+        overflowY: "auto", // Allow vertical scrolling
+      }}
+    >
+      {/* Close button */}
+      <button
+        aria-label="Close popup"
+        className="absolute top-4 right-4 text-white text-xl w-8 h-8 flex justify-center items-center rounded-full border border-white hover:bg-white hover:text-[#161E2E] transition"
+        onClick={closePopup}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
         >
-          <div
-            className="bg-[#161E2E] rounded-xl max-w-4xl w-full p-8 relative text-white shadow-lg animate-fade-in-up"
-            style={{
-              animation: "fadeInUp 0.5s ease-out both",
-            }}
-          >
-            {/* Close button */}
-            <button
-              aria-label="Close popup"
-              className="absolute top-4 right-4 text-white text-xl w-8 h-8 flex justify-center items-center rounded-full border border-white hover:bg-white hover:text-[#161E2E] transition"
-              onClick={closePopup}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-
-            {/* Title */}
-            <h3
-              id="popup-title"
-              className="text-4xl font-serif text-center w-full md:text-5xl mb-6 text-white bg-clip-text text-transparent leading-tight bg-gradient-to-r from-emerald-300 to-sky-400"
-            >
-              {projects[selectedProjectIndex].title}
-            </h3>
-
-            {/* Image and info */}
-            <div className="flex flex-col gap-6 items-center sm:items-start sm:flex-row sm:gap-12">
-              <img
-                src={projects[selectedProjectIndex].imgUrl.src}
-                alt={`Image of ${projects[selectedProjectIndex].title}`}
-                className="rounded-lg max-w-[320px] w-full object-contain"
-              />
-
-              <div className="flex flex-col gap-4">
-                <ul className="text-white text-left list-none list-inside space-y-1 max-w-md">
-                  <li>
-                    <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
-                      <strong>Year:</strong>
-                    </span>{" "}
-                    {projects[selectedProjectIndex].year}
-                  </li>
-                  <li>
-                    <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
-                      <strong>Category:</strong>
-                    </span>{" "}
-                    {projects[selectedProjectIndex].category}
-                  </li>
-                  <li>
-                    <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
-                      <strong>Role:</strong>
-                    </span>{" "}
-                    {projects[selectedProjectIndex].role}
-                  </li>
-                  <li>
-                    <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
-                      <strong>Tools/Language:</strong>
-                    </span>{" "}
-                    {projects[selectedProjectIndex].tools}
-                  </li>
-                </ul>
-
-                {/* Buttons inserted here */}
-                {/* Buttons inserted here */}
-<div className="flex gap-4 flex-wrap mt-1">
-  {projects[selectedProjectIndex].buttons.map((button, buttonIndex) => (
-    <Link key={buttonIndex} href={button.href} passHref>
-      <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-10">
-        {button.label}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
       </button>
-    </Link>
-  ))}
-</div>
-              </div>
-            </div>
+
+      {/* Title */}
+      <h3
+        id="popup-title"
+        className="text-4xl font-serif text-center w-full md:text-5xl mb-6 text-white bg-clip-text text-transparent leading-tight bg-gradient-to-r from-emerald-300 to-sky-400"
+      >
+        {projects[selectedProjectIndex].title}
+      </h3>
+
+      {/* Image and info */}
+      <div className="flex flex-col gap-6 items-center sm:items-start sm:flex-row sm:gap-12">
+        <img
+          src={projects[selectedProjectIndex].imgUrl.src}
+          alt={`Image of ${projects[selectedProjectIndex].title}`}
+          className="rounded-lg max-w-[320px] w-full object-contain"
+        />
+
+        <div className="flex flex-col gap-4">
+          <ul className="text-white text-left list-none list-inside space-y-1 max-w-md">
+            <li>
+              <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
+                <strong>Year:</strong>
+              </span>{" "}
+              {projects[selectedProjectIndex].year}
+            </li>
+            <li>
+              <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
+                <strong>Category:</strong>
+              </span>{" "}
+              {projects[selectedProjectIndex].category}
+            </li>
+            <li>
+              <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
+                <strong>Role:</strong>
+              </span>{" "}
+              {projects[selectedProjectIndex].role}
+            </li>
+            <li>
+              <span className="bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent text-sm md:text-base">
+                <strong>Tools/Language:</strong>
+              </span>{" "}
+              {projects[selectedProjectIndex].tools}
+            </li>
+          </ul>
+
+          {/* Buttons inserted here */}
+          <div className="flex gap-4 flex-wrap mt-1">
+            {projects[selectedProjectIndex].buttons.map((button, buttonIndex) => (
+              <Link key={buttonIndex} href={button.href} passHref>
+                <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl z-10">
+                  {button.label}
+                </button>
+              </Link>
+            ))}
+          </div>
+        </div>
+    </div>
 
             {/* Description */}
             <p className="mt-6 text-white text-base leading-relaxed whitespace-pre-line">
