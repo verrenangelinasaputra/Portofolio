@@ -28,26 +28,26 @@ import certTECHFEST from "@/assets/images/certificate-techfest.jpeg";
 import certHISHOT from "@/assets/images/certificate-hishot.jpg";
 import certAUTHOR from "@/assets/images/certificate-author.jpg";
 
-export function useCountUp(target: number, duration = 2000) {
-  const [count, setCount] = useState(0);
+// export function useCountUp(target: number, duration = 2000): number {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let start = 0;
-    const increment = target / (duration / 16); // 60fps ≈ 16ms
-    const interval = setInterval(() => {
-      start += increment;
-      if (start >= target) {
-        start = target;
-        clearInterval(interval);
-      }
-      setCount(Math.floor(start));
-    }, 16);
+//   useEffect(() => {
+//     let start = 0;
+//     const increment = target / (duration / 16); // 60fps ≈ 16ms
+//     const interval = setInterval(() => {
+//       start += increment;
+//       if (start >= target) {
+//         start = target;
+//         clearInterval(interval);
+//       }
+//       setCount(Math.floor(start));
+//     }, 16);
 
-    return () => clearInterval(interval);
-  }, [target, duration]);
+//     return () => clearInterval(interval);
+//   }, [target, duration]);
 
-  return count;
-}
+//   return count;
+// }
 
 // HEADER COMPONENT
 const Header = () => {
@@ -230,10 +230,10 @@ export default function ProfileSection() {
     },
   ];
 
-  const experience = useCountUp(2);
-  const languages = useCountUp(5);
-  const project = useCountUp(16);
-  const awards = useCountUp(23);
+  // const experience = useCountUp(2);
+  // const languages = useCountUp(5);
+  // const project = useCountUp(16);
+  // const awards = useCountUp(23);
 
   return (
     <>
@@ -313,7 +313,7 @@ export default function ProfileSection() {
             {/* Stats content */}
             <div className="relative z-20">
               <p className="text-4xl md:text-5xl font-serif text-emerald-400">
-                {experience}+
+                2+
               </p>
               <p className="mt-2 text-base md:text-lg text-white/70">
                 Years of
@@ -323,7 +323,7 @@ export default function ProfileSection() {
             </div>
             <div className="relative z-20">
               <p className="text-4xl md:text-5xl font-serif text-sky-400">
-                {languages}+
+                5+
               </p>
               <p className="mt-2 text-base md:text-lg text-white/70">
                 Programming
@@ -333,7 +333,7 @@ export default function ProfileSection() {
             </div>
             <div className="relative z-20">
               <p className="text-4xl md:text-5xl font-serif text-emerald-400">
-                {project}
+                16
               </p>
               <p className="mt-2 text-base md:text-lg text-white/70">
                 Projects
@@ -343,7 +343,7 @@ export default function ProfileSection() {
             </div>
             <div className="relative z-20">
               <p className="text-4xl md:text-5xl font-serif text-sky-400">
-                {awards}
+                23
               </p>
               <p className="mt-2 text-base md:text-lg text-white/70">
                 Awards and
