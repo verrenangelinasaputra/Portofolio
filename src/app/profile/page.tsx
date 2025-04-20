@@ -155,14 +155,14 @@ export default function ProfileSection() {
     {
       src: actTerra,
       alt: "Terra",
-      description: "1st Meeting with Terra SG's Leader",
+      description: "1st Meeting with Terra SG&apos;s Leader",
     },
     {
       src: actSoko,
       alt: "Soko",
       description: "Best Intern Soko Financial Batch 7",
     },
-    { src: actFL, alt: "FL", description: "Best Freshmen Leader FYP'28" },
+    { src: actFL, alt: "FL", description: "Best Freshmen Leader FYP&apos;28" },
     {
       src: actSamsung,
       alt: "Samsung",
@@ -388,7 +388,7 @@ export default function ProfileSection() {
                 </div>
               </div>
               <p className="mt-2 text-sm md:text-base text-white/70 leading-5 mb-3">
-                ● Conduct global market research on Samsung's products and
+                ● Conduct global market research on Samsung&apos;s products and
                 mobile device trends, managing the distribution of insights
                 across Southeast Asia, Oceania, and East Asia subsidiaries.
                 <br></br>● Perform data wrangling and data visualization on Knox

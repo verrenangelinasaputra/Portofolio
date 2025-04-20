@@ -57,7 +57,7 @@ export default function WebProjectSection() {
     {
       title: "BNEC: NMR",
       description:
-        "BNEC: NMR is a UI/UX design project for the annual new student intake event at BINUS University's largest student organization, BINUS English Club. As the UI/UX designer, I was responsible for revamping the existing design to create a fresh, modern, and engaging experience for the event. The new design enhances user interaction, simplifies navigation, and reflects the dynamic and professional spirit of the club, ensuring an impactful introduction for new students.",
+        "BNEC: NMR is a UI/UX design project for the annual new student intake event at BINUS University&apos;s largest student organization, BINUS English Club. As the UI/UX designer, I was responsible for revamping the existing design to create a fresh, modern, and engaging experience for the event. The new design enhances user interaction, simplifies navigation, and reflects the dynamic and professional spirit of the club, ensuring an impactful introduction for new students.",
       imgUrl: nmr,
       href: "",
       year: "2023",
@@ -89,7 +89,7 @@ export default function WebProjectSection() {
     {
       title: "HI-Toyz",
       description:
-        "HI-Toyz is a campus project where I was tasked with designing a website prototype and developing the official company website for a toy store specializing in plastic model kits and figure statues. The store, known for being an official reseller of brands like Tamiya, Bandai, and Mattel, aims to expand its market by selling products online to a global audience. This project focuses on creating a website that reflects the store's identity and improves customer service.",
+        "HI-Toyz is a campus project where I was tasked with designing a website prototype and developing the official company website for a toy store specializing in plastic model kits and figure statues. The store, known for being an official reseller of brands like Tamiya, Bandai, and Mattel, aims to expand its market by selling products online to a global audience. This project focuses on creating a website that reflects the store&apos;s identity and improves customer service.",
       imgUrl: toyz,
       href: "",
       year: "2023",
@@ -184,7 +184,7 @@ export default function WebProjectSection() {
           <br />
           <div className="flex justify-center">
             <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent text-sm md:text-base">
-              What I've Built
+              What I&apos;ve Built
             </p>
           </div>
           <h2 className="font-serif text-white text-4xl md:text-5xl text-center mt-6 leading-tight">

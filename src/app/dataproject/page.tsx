@@ -37,7 +37,7 @@ export default function DataProjectPage() {
     {
       title: "Emission Analytics",
       description:
-        "An environmental data visualization project that won 3rd place at the DAIC 2024 competition. This infographic explores Asia's dominant role in global CO₂ emissions, highlighting top contributors like China and Indonesia, and emphasizes the urgency of sustainable action to combat climate change.",
+        "An environmental data visualization project that won 3rd place at the DAIC 2024 competition. This infographic explores Asia&apos;s dominant role in global CO₂ emissions, highlighting top contributors like China and Indonesia, and emphasizes the urgency of sustainable action to combat climate change.",
       imgUrl: daic,
       href: "",
       year: "2024",
@@ -175,7 +175,7 @@ export default function DataProjectPage() {
           <br />
           <div className="flex justify-center">
             <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent text-sm md:text-base">
-              What I've Built
+              What I&apos;ve Built
             </p>
           </div>
           <h2 className="font-serif text-white text-4xl md:text-5xl text-center mt-6 leading-tight">
